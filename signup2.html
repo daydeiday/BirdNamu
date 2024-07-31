@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>새와나 : 회원가입</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    width: 100%;
+    border-bottom: solid #4BB9B2 0px;
+    border-radius: 0px;
+    box-shadow: 0 1px 5px #4BB9B2;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  header button {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  header h1 {
+    font-size: 16px;
+    color: #4BB9B2;
+    margin: 0;
+    flex:1;
+    text-align: center;
+  }
+  header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header ul li#current-step {
+    background: #4BB9B2;
+    border: solid #4BB9B2 1px;
+    border-radius:11px;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    text-align: center;
+    color: #ffffff;
+  }
+  header ul li#next-step {
+    background: #d9d9d9;
+    border: solid #d9d9d9 1px;
+    border-radius:11px;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    text-align: center;
+    color: #ffffff;
+  }
+  header ul li#last-step {
+    background: #307571;
+    border-radius:10px;
+    width: 20px;
+    height: 20px;
+    margin: right;
+    text-align: center;
+    color: #ffffff;
+  }
+  section.title{
+    padding: 20px;
+    max-width: 600px;
+    margin: auto auto 0px auto;
+  }
+  #logo {
+    width: 150px;
+    height: 150px;
+    border: solid #d9d9d9 1px;
+    margin-bottom:5px;
+    font-size: 30px;
+    color: #4BB9B2;
+  }
+  section.form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 10px auto 20px auto;
+  }
+/*   section.form article{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: left;
+  } */
+  article {
+    margin-bottom: 20px;
+  }
+/*   label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  } */
+  section.form article label{
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  section.form article input {
+    border: solid #4bb9b2 1px;
+    border-radius: 2px;
+    height: 25px;
+    width: 100%;
+  }
+  
+  fieldset{
+    border: none;
+    width: 100%;
+    padding: none;
+    margin: none;
+  }
+  
+  fieldset div#gender{
+    border: solid #4bb9b2 1px;
+    border-radius: 2px;
+    height: 25px;
+    width: 100%;
+  }
+
+  section.submit {
+    max-width: 600px;
+    margin: 20px auto 0px auto;
+  }
+  input[type="button"] {
+    width: 100%;
+    background-color: #4BB9B2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  input[type="button"]:hover {
+    background-color: #307571;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <button onclick="history.back()">뒤로가기</button>
+  <h1>회원가입</h1>
+  <ul style="list-style: none;"><li id="last-step">1</li><li id="current-step">2</li></ul> <!-- 빈 div로 우측 정렬 유지 -->
+</header>
+<main>
+<section class="title">
+  <div>회원정보를 입력해주세요.</div>
+</section>
+<section class="form">
+  <form>
+  <article>
+    <label for="username">이름</label>
+    <input type="text" id="username" name="username">
+  </article>
+  <article><label for="userid">아이디</label>
+    <input type="text" id="userid" name="userid"></article>
+  <article><label for="password">비밀번호</label><input type="text" id="password" name="password"></article>
+  <article><label for="password-confirm">비밀번호 확인</label><input type="text" id="password" name="password-confirm"></article>
+  <article><label for="email">이메일 주소</label><input type="email" id="email" name="email"></article>
+  <article><label for="birthdate">생년월일</label><input type="date" id="birthdate", name="birthdate"></article>
+  <fieldset>
+        <span>성별</span>
+        <div id="gender">
+          <input type="radio" id="genderChoice1" name="gender" value="남성" />
+          <label for="genderChoice1">남성</label>
+          <input type="radio" id="genderChoice2" name="gender" value="여성" />
+          <label for="genderChoice2">여성</label>
+        </div>
+  </fieldset>
+ </form>
+
+</section>
+</main>
+<section class="submit">
+    <article>
+    <label for="submit">
+      <input type="button" id="submit" value="가입완료">
+    </label>
+  </article>
+</section>
+
+</body>
+</html>
