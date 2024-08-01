@@ -1,0 +1,62 @@
+.symptoms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 30px;  
+  border: 3px solid black;
+  border-radius: 8px; 
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.symptom-details {
+  text-align: center;
+}
+
+.symptom-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.symptom-item {
+  margin-bottom: 10px;
+}
+
+#edit-symptoms {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #4BB9B2;
+}
+
+#edit-symptoms:hover {
+  text-decoration: underline;
+}
+
+.diagnosis {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 800px; 
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.diagnosis-box {
+  background-color: #cce5ff;
+  padding: 30px; 
+  border-radius: 8px; 
+  text-align: center;
+  font-size: 16px; 
+  font-weight: bold;
+  position: relative;
+}
+
+.percentage {
+  margin-top: 10px;
+  font-size: 14px; 
+  color: #333;
+}
