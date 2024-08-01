@@ -1,0 +1,35 @@
+
+#sol {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.diagnosis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between diagnosis boxes */
+  width: 100%;
+}
+
+.diagnosis-box {
+  background-color: #cce5ff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.percentage {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.navigation-arrows {
+ 
