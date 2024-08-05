@@ -1,0 +1,70 @@
+<!--
+** 아이콘, 버튼은 왠만하면 a태그+img태그로 링크를 걸어둠 **
+(1) footer 아이콘 페이지 링크 변경해야함.
+(2) section>article.jitem 의 onclick 속성의 페이지 링크 변경해야함.
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME : 할 일 목록</title>
+    <link rel="stylesheet" href="../data/style/todo.css" type="text/css" />
+</head>
+<script src="../js/todo.js"></script>
+<body>
+    <main>
+        <section class="container">
+          <article class="title-container">
+            <ul>
+              <li class="picker">
+                <label for="bird">
+                  <div id="bird-icon">
+                    <img src="../data/img/icons/bird-svgrepo-com.svg" alt="">
+                  </div>
+                </label>
+                <!-- 필요시 select 태그에 required-->
+                <select name="bird" id="bird">
+                  <option value="" disabled hidden selected>반려조 선택</option>
+                  <option value="bird01">사랑</option>
+                  <option value="bird02">초롱</option>
+                </select>
+              </li>
+              <li class="picker">
+                <label for="jdate">
+                  <div id="calender-icon">
+                    <img src="../data/img/icons/calendar-note-date-svgrepo-com.svg" alt="">
+                  </div>
+                </label>
+                <input type="date" id="jdate" required>
+              </li>
+            </ul>
+          </article>
+          <article class="todo-container">
+            <ul id="todo-list"></ul>
+            <form id="todo-form">
+              <input type="text" id="todo-input" placeholder="새로운 할 일 추가" required>
+              <button type="submit"><img src="../data/img/icons/circle-pluc-solid.svg" alt=""></button>
+            </form>
+          </article>
+        </section>        
+    </main>
+    <footer class="navbar">
+            <ul>
+                <li>
+                    <a href="../html/main-board.html">
+                        <img src="../data/img/icons/compass-solid.svg"/>
+                    </a>
+                </li>                
+                <li> <a href="../html/main-todo.html"><img src="../data/img/icons/list-check-solid-color.svg"/></a></li>
+                <li> <a href="../html/main.html"><img src="../data/img/icons/pen-nib-solid.svg"/></a>
+                </li>
+                <li> <a href="../html/checker_info.html"><img src="../data/img/icons/stethoscope-solid.svg"/></a></li>
+                <li> <a href="../html/login.html"><img src="../data/img/icons/circle-user-solid.svg"/></a></li>
+            </ul>
+    </footer>
+</body>
+
+</html>

@@ -168,7 +168,8 @@ ul.jtext {
     left: calc(100% - 92px);
     top: calc(100% - 142px);
     border: none;
-    border-radius: 36px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 #floating-btn:hover{
     cursor:pointer;
