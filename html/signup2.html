@@ -1,54 +1,66 @@
+<!-- 
+1. (완료) 로그인 하기 누르면 로그인 페이지로 넘기기
+2. (일부 완료) signup.html에서 다음버튼 누르면 페이지 내용이 signup2.html로 바뀌도록 할 수도 있는지 고려하기 (엔드포인드?)
+3. 데이터 백으로 보내는 동작 추가하기
+-->
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>새와나 : 회원가입</title>
-  <link rel="stylesheet" href="../data/style/signup2.css" type="text/css"/>
+  <link rel="stylesheet" href="../data/style/signup2.css" type="text/css" />
 </head>
+
 <body>
-
-<header>
-  <button onclick="history.back()">뒤로가기</button>
-  <h1>회원가입</h1>
-  <ul style="list-style: none;"><li id="last-step">1</li><li id="current-step">2</li></ul> <!-- 빈 div로 우측 정렬 유지 -->
-</header>
-<main>
-<section class="title">
-  <div>회원정보를 입력해주세요.</div>
-</section>
-<section class="form">
-  <form>
-  <article>
-    <label for="username">이름</label>
-    <input type="text" id="username" name="username">
-  </article>
-  <article><label for="userid">아이디</label>
-    <input type="text" id="userid" name="userid"></article>
-  <article><label for="password">비밀번호</label><input type="text" id="password" name="password"></article>
-  <article><label for="password-confirm">비밀번호 확인</label><input type="text" id="password" name="password-confirm"></article>
-  <article><label for="email">이메일 주소</label><input type="email" id="email" name="email"></article>
-  <article><label for="birthdate">생년월일</label><input type="date" id="birthdate", name="birthdate"></article>
-  <fieldset>
-        <span>성별</span>
-        <div id="gender">
-          <input type="radio" id="genderChoice1" name="gender" value="남성" />
-          <label for="genderChoice1">남성</label>
-          <input type="radio" id="genderChoice2" name="gender" value="여성" />
-          <label for="genderChoice2">여성</label>
-        </div>
-  </fieldset>
- </form>
-
-</section>
-</main>
-<section class="submit">
+  <header>
+    <button onclick="history.back()">뒤로가기</button>
+    <h1>회원가입</h1>
+    <ul style="list-style: none;"><li id="last-step">1</li><li id="current-step">2</li></ul> <!-- 빈 div로 우측 정렬 유지 -->
+  </header>
+  <main>
+  <section class="title">
+    <div>회원정보를 입력해주세요.</div>
+  </section>
+  <section class="form">
+    <form>
     <article>
-    <label for="submit">
-      <input type="button" id="submit" value="가입완료">
-    </label>
-  </article>
-</section>
+      <label for="username">이름</label>
+      <input type="text" id="username" name="username">
+    </article>
+    <article><label for="userid">아이디</label>
+      <input type="text" id="userid" name="userid"></article>
+    <article><label for="password">비밀번호</label><input type="text" id="password" name="password"></article>
+    <article><label for="password-confirm">비밀번호 확인</label><input type="text" id="password" name="password-confirm"></article>
+    <article><label for="email">이메일 주소</label><input type="email" id="email" name="email"></article>
+    <article><label for="birthdate">생년월일</label><input type="date" id="birthdate", name="birthdate"></article>
+    <article>
+      <label for="gender">성별</label>
+      <select name="usergender" id="gender"> <!-- 드롭다운 메뉴 -->
+        <option value="female">여성</option>
+        <option value="male">남성</option>
+        <option value="other">기타</option>
+      </select>
+    </article>
+    </form>
+  </section>
+  
+  <section class="submit">
+      <article>
+      <label for="submit">
+        <input type="button" id="submit" value="가입완료" onclick="handleSubmit()">
+      </label>
+    </article>
+  </section>
+  </main>
+  <script>
+    function handleSubmit() {
+      const body = document.querySelector('body');
+      body.innerHTML =
+        '<main class="submitted"><section><div id="logo">새와나(id="logo")</div><div id="submitted"><h1>반갑습니다 :D</h1><h2>회원가입이 완료되었습니다.</h2><div><a href="./login.html">로그인하러 가기</a></div></div></section></main>';
+    }
+  </script>
+  </body>
 
-</body>
 </html>
