@@ -7,6 +7,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    /*align-items: center;*/
     box-sizing: border-box;
 }
 
@@ -30,8 +31,13 @@ header.journal-list {
     z-index: 1000;
 }
 
+header.journal-list>div {
+    width: 100vw;
+    /*max-width: 460px;*/
+}
+
 header.journal-list>div:first-child {
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 header.journal-list>div:first-child>ul {
@@ -42,12 +48,13 @@ header.journal-list>div:first-child>ul {
     justify-content: start;
 }
 
-
 #bird-icon {
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
 }
+
 .journal-title {
     font-size: 20px;
+    margin-left: 5px;
 }
 
 .journal-title #bird-name {
@@ -64,15 +71,17 @@ header.journal-list>div.sort {
     margin-right: 20px;
     border: none;
     background-color: #ffffff;
-    color:#4BB9B2;
+    color: #4BB9B2;
     font-size: 14px;
     font-weight: bold;
 }
+
 #sort-option {
     font-weight: normal;
 }
 
 main {
+    width: 100%;
     flex: 1;
     overflow-y: auto;
     margin-top: 120px;
@@ -87,22 +96,96 @@ section {
 
 section>article.jitem {
     width: 100%;
+    height: 120px;
+    padding: 10px 15px;
+    margin: 5px 0;
     background-color: #eeeeee;
     box-sizing: border-box;
-    padding: 5px;
-    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+section>article.jitem:hover{
+    cursor: pointer;
+    background-color: beige;
+}
+section>article.jitem>div:first-child{
+    width: calc(100% - 90px);
+}
+ul.jtext {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    list-style: none;
+}
+
+#jdate {
+    font-size: 14px;
+    font-weight: bold;
+    color: #4BB9B2;
+}
+
+#jtitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#jcontent {
+    font-size: 15px;
+}
+
+#jreaction {
+    font-size: 14px;
+}
+
+
+/* 사진 */
+#jimage {
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    background: #d9d9d9;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#jimage>img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+#floating-btn {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    left: calc(100% - 92px);
+    top: calc(100% - 142px);
+    border: none;
+    border-radius: 36px;
+}
+#floating-btn:hover{
+    cursor:pointer;
 }
 
 footer.navbar {
-    background-color:#4BB9B2 ;
+    background-color: #4BB9B2;
     width: 100%;
     height: 50px;
     position: fixed;
     bottom: 0;
     left: 0;
+    box-sizing: border-box;
 }
 
-footer.navbar ul {
+footer.navbar>ul {
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
