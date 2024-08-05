@@ -1,21 +1,24 @@
+<!--
+** 아이콘, 버튼은 왠만하면 a태그+img태그로 링크를 걸어둠 **
+(1) footer 아이콘 페이지 링크 변경해야함.
+(2) section>article.jitem 의 onclick 속성의 페이지 링크 변경해야함.
+-->
+
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>새와나 : HOME</title>
+    <title>HOME : 성장일지</title>
     <link rel="stylesheet" href="../data/style/main.css" type="text/css" />
 </head>
-
 <body>
     <header class="journal-list">
         <div>
             <ul style="list-style: none;">
                 <li>
-                    <svg width="45" height="36" viewBox="0 0 45 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path id="bird-icon" d="M32.0627 0C28.6455 0 25.8752 2.77031 25.8752 6.1875V8.24062L0.87911 27.4641C-0.105265 28.2234 -0.288078 29.6367 0.464266 30.6211C1.21661 31.6055 2.63692 31.7883 3.6213 31.0359L8.86661 27H18.2252L21.5018 34.9523C21.8533 35.8172 22.8447 36.225 23.7026 35.8734C24.5604 35.5219 24.9752 34.5305 24.6236 33.6727L21.8744 27H24.7502C24.8276 27 24.8979 27 24.9752 27L28.2518 34.9594C28.6033 35.8242 29.5947 36.232 30.4526 35.8805C31.3104 35.5289 31.7252 34.5375 31.3736 33.6797L28.4205 26.5078C34.0947 24.8977 38.2502 19.6875 38.2502 13.5V9V8.4375L43.9104 7.02422C44.5151 6.87656 44.8807 6.26484 44.726 5.66016C44.2268 3.65625 42.4268 2.25 40.3596 2.25H36.8369C35.6979 0.878906 33.9822 0 32.0627 0ZM32.0627 4.5C32.2843 4.5 32.5037 4.54365 32.7085 4.62845C32.9132 4.71326 33.0993 4.83756 33.2559 4.99426C33.4126 5.15096 33.5369 5.33698 33.6218 5.54172C33.7066 5.74646 33.7502 5.96589 33.7502 6.1875C33.7502 6.40911 33.7066 6.62854 33.6218 6.83328C33.5369 7.03802 33.4126 7.22404 33.2559 7.38074C33.0993 7.53744 32.9132 7.66174 32.7085 7.74655C32.5037 7.83135 32.2843 7.875 32.0627 7.875C31.8411 7.875 31.6217 7.83135 31.4169 7.74655C31.2122 7.66174 31.0262 7.53744 30.8695 7.38074C30.7128 7.22404 30.5885 7.03802 30.5037 6.83328C30.4189 6.62854 30.3752 6.40911 30.3752 6.1875C30.3752 5.96589 30.4189 5.74646 30.5037 5.54172C30.5885 5.33698 30.7128 5.15096 30.8695 4.99426C31.0262 4.83756 31.2122 4.71326 31.4169 4.62845C31.6217 4.54365 31.8411 4.5 32.0627 4.5Z" fill="#F0C05A"/>
-                    </svg>
+                    <object data="../data/img/icons/crow-solid.svg" type="image/svg+xml"></object>
                 </li>
                 <li class="journal-title">
                     <!-- 새 이름 변경 용이하도록 bird-name id 부여 -->
@@ -34,68 +37,88 @@
     </header>
     <main>
         <section>
+            <article class="jitem" onclick="location.href='./login.html'">
+                <div>
+                    <ul class="jtext">
+                        <li id="jdate">2024년00월00일</li>
+                        <li id="jtitle">제목입니다</li>
+                        <li id="content">내용 미리보기 입니다...</li>
+                        <li id="jreaction">공감 00 댓글 00</li>
+                    </ul>
+                </div>
+                <div id="jimage"><img src="../data/img/사랑앵무.jpg" alt="임의의 사진"></div>
+            </article>
             <article class="jitem">
-                <div id="jtext">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                <div>
+                    <ul class="jtext">
+                        <li id="jdate">0000년 00월 00일</li>
+                        <li id="jtitle">예시2번 제목</li>
+                        <li id="content">내용 미리보기 입니다...</li>
+                        <li id="jreaction">공감 00 댓글 00</li>
+                    </ul>
+                </div>
+                <div id="jimage"><img src="" alt="임의의 사진"></div>
+            </article>
+            <article class="jitem">
+                <div>
+                    <ul class="jtext">
+                        <li id="jdate">0000년 00월 00일</li>
+                        <li id="jtitle">예시 3번 제목</li>
+                        <li id="content">내용 미리보기 입니다...</li>
+                        <li id="jreaction">공감 00 댓글 00</li>
                     </ul>
                 </div>
             </article>
             <article class="jitem">
-                <div id="jtext">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                <div>
+                    <ul class="jtext">
+                        <li id="jdate">0000년 00월 00일</li>
+                        <li id="jtitle">예시 4번 제목</li>
+                        <li id="content">내용 미리보기 입니다...</li>
+                        <li id="jreaction">공감 00 댓글 00</li>
                     </ul>
                 </div>
             </article>
             <article class="jitem">
-                <div id="jtext">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                <div>
+                    <ul class="jtext">
+                        <li id="jdate">0000년 00월 00일</li>
+                        <li id="jtitle">예시 5번 제목</li>
+                        <li id="content">내용 미리보기 입니다...</li>
+                        <li id="jreaction">공감 00 댓글 00</li>
                     </ul>
                 </div>
             </article>
             <article class="jitem">
-                <div id="jtext">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-            </article>
-            <article class="jitem">
-                <div id="jtext">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                <div>
+                    <ul class="jtext">
+                        <li id="jdate">0000년 00월 00일</li>
+                        <li id="jtitle">예시 6번 제목</li>
+                        <li id="content">내용 미리보기 입니다...</li>
+                        <li id="jreaction">공감 00 댓글 00</li>
                     </ul>
                 </div>
             </article>
         </section>
+        <div id="floating-btn">
+            <a href="../html/journal-new.html"><img src="../data/img/icons/circle-pluc-solid.svg" alt="추가 아이콘"></a>
+        </div>
+        
     </main>
     <footer class="navbar">
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+            <ul>
+                <li>
+                    <a href="../html/login.html">
+                        <img src="../data/img/icons/compass-solid.svg"/>
+                    </a>
+                </li>                
+                <li> <a href="../html/login.html"><img src="../data/img/icons/list-check-solid.svg"/></a></li>
+                <li> <a href="../html/main.html"><img src="../data/img/icons/pen-nib-solid-color.svg"/></a>
+                </li>
+                <li> <a href="../html/checker_info.html"><img src="../data/img/icons/stethoscope-solid.svg"/></a></li>
+                <li> <a href="../html/login.html"><img src="../data/img/icons/circle-user-solid.svg"/></a></li>
+            </ul>
     </footer>
-
 </body>
 
 </html>

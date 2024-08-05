@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사랑이의 성장일지 : jtitle</title>
+  <link rel="stylesheet" href="../data/style/journal.css" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <button onclick="history.back()">뒤로가기</button>
+    <h1><span>사랑<span>이의 성장일지</h1>
+    <div></div> <!-- 비어있는 태그를 써서 헤더 정렬하기-->
+  </header>
+  <main>
+    <section class="journal-layout">
+      <section class="post-layout">
+        <article class="journal-head">
+          <h1 id="jtitle">제목입니다</h1>
+          <div id="jinfo">
+            <div id="jimg"><img src="../data/img/사랑앵무.jpg" alt="유저 프로필 사진"></div>
+            <div>
+              <ul>
+                <li id="jauthor">유저닉네임</li>
+                <li id="jdate">2024년 00월 00일</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+        <article class="jcontent">
+          <div><img id="jcontent-img" src="../data/img/사랑앵무.jpg" alt="예시 사진"></div>
+          <div id="jcontent-text">사랑이가 우리집에 처음 온 날이다.<br>앞으로 즐거운 추억 많이 쌓자!!</div>
+        </article>
+        <article class="journal-tail">
+          <div>
+            <ul>
+              <li id="like-btn"><img src="../data/img/icons/heart-regular.svg" alt="좋아요 버튼"></li>
+              <li>
+                <span>공감</span>
+                <span id="like-count">10</span>
+              </li>
+              <li>
+                <span>댓글</span>
+                <span id="com-count">10</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+      <section class="comment-layout">
+        <article id="comment-item">
+          <div>
+            <ul>
+              <li id="cimg"><img src="../data/img/사랑앵무.jpg" alt="유저 프로필 사진"></li>
+              <li id="cauthor">유저닉네임</li>
+            </ul>
+          </div>
+          <div id="ccontent">너무 귀여워요.<br>앞으로 사랑이와 함께 행복한 추억 많이 만드시길 바랍니다.</div>
+          <div id="cdate">2024년 00월 00일</div>
+        </article>
+        <article id="comment-item">
+          <div>
+            <ul>
+              <li id="cimg"><img src="../data/img/사랑앵무.jpg" alt="유저 프로필 사진"></li>
+              <li id="cauthor">유저닉네임2</li>
+            </ul>
+          </div>
+          <div id="ccontent">22222222<br>앞으로 사랑이와 함께 행복한 추억 많이 만드시길 바랍니다.</div>
+          <div id="cdate">2024년 00월 00일</div>
+        </article>
+      </section>
+    </section>
+
+    <section class="comment-form">
+      <article>
+        <ul>
+          <li>
+            <label for="comment"></label>
+            <input type="text" id="comment" name="comment">
+          </li>
+          <li>
+            <label for="submit"></label>
+            <input type="button" id="submit" value="등록" onclick="handleSubmit()">
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</body>
+
+</html>
