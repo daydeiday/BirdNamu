@@ -54,7 +54,7 @@ main{
 }
 
 section.journal-layout {
-  padding: 10px;
+  padding: 0px 10px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -79,38 +79,50 @@ article.journal-head{
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-
   width: 100%;
   /*max-width: 460px;*/
-  margin-top: 10px;
+  box-sizing: border-box;
   margin-bottom: 10px;
+  
+  padding: 10px;
 }
 #jtitle{
   font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 400;
+  margin: 20px 0px;
+}
+.journal-head>div#jhead{
+  height: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
 }
 #jinfo {
+  width: auto;
+  height: 32px;
+
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
 }
-#jinfo>div:first-child{
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
+#jimg{
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
   overflow: hidden;
-
   margin-right: 10px;
 }
-#jinfo>div>img{
+#jimg>img{
   width:100%;
   object-fit: cover;
 }
 
 #jinfo>div>ul {
-  display: felx;
+  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: start;
@@ -120,11 +132,50 @@ article.journal-head{
   list-style: none;
 }
 ul>li#jauthor{
-  font-size: 15px;
+  color: #909090;
+  font-size: 12px;
 }
 
 ul>li#jdate{
+  color: #909090;
+  font-size: 12px;
+}
+.ud {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: auto;
+  height: 15.5px;
+}
+.ud>ul{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 15.5px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ud>ul>li {
   font-size: 14px;
+  color:#909090;
+}
+#update-btn {
+  width: auto;
+  height: 15.5px;
+}
+#update-btn>a{
+  text-decoration: none;
+  height: 100%;
+}
+#delete-btn{
+  width: auto;
+  height: 15.5px;
+}
+#delete-btn>a{
+  text-decoration: none;
+  height: 100%;
 }
 
 article.jcontent {

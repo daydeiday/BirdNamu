@@ -1,0 +1,85 @@
+<!--
+** 아이콘, 버튼은 왠만하면 a태그+img태그로 링크를 걸어둠 **
+(1) footer 아이콘 페이지 링크 변경해야함.
+(2) section>article.jitem 의 onclick 속성의 페이지 링크 변경해야함.
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME : 자유게시판</title>
+    <link rel="stylesheet" href="../data/style/main.css" type="text/css" />
+</head>
+<body>
+    <header class="journal-list">
+        <div>
+            <ul style="list-style: none;">
+                <li>
+                    <object data="../data/img/icons/crow-solid.svg" type="image/svg+xml"></object>
+                </li>
+                <li class="journal-title">
+                    자유게시판
+                </li>
+            </ul>
+        </div>
+        <div class="sort">
+            <form>
+                <select name="sort" id="sort">
+                    <option id="sort-option" value="whole" selected>전체글</option>
+                    <option id="sort-option" value="q">질문글</option>
+                    <option id="sort-option" value="no-q">일상글</option>
+                </select>
+            </form>
+        </div>
+    </header>
+    <main>
+        <section>
+            <article class="jitem" onclick="location.href='./board.html'">
+                <div>
+                    <ul class="jtext">
+                        <li id="jdate">#질문</li>
+                        <li id="jtitle">성별은 언제쯤 알 수 있나요?</li>
+                        <li id="content">어쩌다 보니 집사가 된 지 3일차네요...</li>
+                        <li id="jreaction">2024년00월00일 추천 00 댓글 00</li>
+                    </ul>
+                </div>
+                <div id="jimage"><img src="../data/img/사랑앵무.jpg" alt="임의의 사진"></div>
+            </article>
+            <article class="jitem" onclick="location.href='./board.html'">
+              <div>
+                  <ul class="jtext">
+                      <li id="jdate">#일상</li>
+                      <li id="jtitle">소파가 남아 나지않는 요즘</li>
+                      <li id="content">소파 뒷부분은 잘 안 보여서 몰랐는데...</li>
+                      <li id="jreaction">2024년00월00일 추천 00 댓글 00</li>
+                  </ul>
+              </div>
+              <div id="jimage"><img src="../data/img/사랑앵무.jpg" alt="임의의 사진"></div>
+          </article>
+
+        </section>
+        <div id="floating-btn">
+            <a href="../html/board-create.html"><img src="../data/img/icons/circle-pluc-solid.svg" alt="추가 아이콘"></a>
+        </div>
+        
+    </main>
+    <footer class="navbar">
+            <ul>
+                <li>
+                    <a href="../html/login.html">
+                        <img src="../data/img/icons/compass-solid-color.svg"/>
+                    </a>
+                </li>                
+                <li> <a href="../html/login.html"><img src="../data/img/icons/list-check-solid.svg"/></a></li>
+                <li> <a href="../html/main.html"><img src="../data/img/icons/pen-nib-solid.svg"/></a>
+                </li>
+                <li> <a href="../html/checker_info.html"><img src="../data/img/icons/stethoscope-solid.svg"/></a></li>
+                <li> <a href="../html/login.html"><img src="../data/img/icons/circle-user-solid.svg"/></a></li>
+            </ul>
+    </footer>
+</body>
+
+</html>
