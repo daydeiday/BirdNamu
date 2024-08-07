@@ -1,50 +1,175 @@
-.container {
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+header {
   text-align: center;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
 }
 
-.image-container {
-  position: relative;
-  display: inline-block;
-}
-
-#bird-image {
-  width: 100%;
-  height: auto;
-  max-width: 500px;
-}
-
-.hover-area {
-  position: absolute;
-  cursor: pointer;
-  background-color: rgba(255, 0, 0, 0.2);
-  border: 2px solid transparent;
-}
-
-.hover-area:hover {
-  border: 2px solid red;
-}
-
-#ailments {
-  margin-top: 20px;
-}
-
-#next-button {
+.option-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #4CAF50;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.option {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+}
+
+.option.active {
+  font-weight: bold;
+  color: #000;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 200px; /* Adjusted for header and option-bar height */
+  box-sizing: border-box;
+  position: relative;
+}
+
+.fixed-container {
+  position: fixed;
+  top: 140px; /* Adjusted for header and option-bar height */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.grid-item {
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item:hover {
+  background-color: #e0e0e0;
+}
+
+.symptoms-container {
+  margin-top: 160px; /* Adjusted for fixed header and grid */
+  width: 100%;
+  max-width: 800px;
+  overflow-y: auto;
+  max-height: calc(100% - 340px); /* Adjusted for other elements */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#symptoms-list {
+  margin-top: 10px;
+}
+
+.symptom-item {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.symptom-item:hover {
+  background-color: #e0e0e0;
+}
+
+.selected-data {
+  display: none;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 80px;
+}
+
+.selected-data h2 {
+  margin: 0 0 10px 0;
+}
+
+.selected-part {
+  margin-bottom: 10px;
+}
+
+.selected-part span {
+  font-weight: bold;
+}
+
+#reset-button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #ff4c4c;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-#next-button:hover {
-  background-color: #45a049;
+#reset-button:hover {
+  background-color: #ff0000;
+}
+
+.navigation-arrows {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.navigation-arrows .arrow {
+  text-decoration: none;
+  font-size: 24px;
+  color: #333;
+}
+
+.navigation-arrows .arrow:hover {
+  color: #000;
 }

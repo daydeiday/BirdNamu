@@ -11,34 +11,52 @@
   <header>
     <h1>건강 자문 AI</h1>
   </header>
-  <div class="option-bar">
-    <a href="../html/checker_info.html" class="option">기본 정보</a>
-    <span class="arrow">▶</span>
-    <a href="../html/checker_symptom.html" class="option">증상 기록</a>
-    <span class="arrow">▶</span>
-    <a href="../html/checker_diagnosis.html" class="option active">가능 질환</a>
-    <span class="arrow">▶</span>
-    <a href="../html/checker_solution.html" class="option">대처법</a>
-  </div>
-
-  <div class="symptoms">
-    <div class="symptom-details">
-      <div class="symptom-header">증상</div>
-      <div class="symptom-item">부위: 다리</div>
-      <div class="symptom-item">해당 사항: 절뚝거림, 붓기, 열기</div>
-      <a href="../html/checker_symptom.html" id="edit-symptoms">수정하기</a>
+  <main>
+    <div class="option-bar">
+      <a href="../html/checker_info.html" class="option">기본 정보</a>
+      <span class="arrow">▶</span>
+      <a href="../html/checker_symptom.html" class="option">증상 기록</a>
+      <span class="arrow">▶</span>
+      <a href="../html/checker_diagnosis.html" class="option active">가능 질환</a>
+      <span class="arrow">▶</span>
+      <a href="../html/checker_solution.html" class="option">대처법</a>
     </div>
-  </div>
+  
+    <div class="symptoms">
+      <div class="symptom-details">
+        <div class="symptom-header">증상</div>
+        <div class="symptom-item">부위: 다리</div>
+        <div class="symptom-item">해당 사항: 절뚝거림, 붓기, 열기</div>
+        <a href="../html/checker_symptom.html" id="edit-symptoms">수정하기</a>
+      </div>
+    </div>
+  
+    <div id="diagnosis-container" class="diagnosis">
+      <!--가능질환은 여기 표시 (JAVASCRIPT로 연결!! 데이터는 JSON으로 저장하기)-->
+    </div>
+  
+    <div class="navigation-arrows">
+      <a href="../html/checker_symptom.html" class="arrow left">&larr;</a>
+      <a href="../html/checker_solution.html" class="arrow right">&rarr;</a>
+    </div>  
+  </main>
 
-  <div id="diagnosis-container" class="diagnosis">
-    <!--가능질환은 여기 표시 (JAVASCRIPT로 연결!! 데이터는 JSON으로 저장하기)-->
-  </div>
-
-  <div class="navigation-arrows">
-    <a href="../html/checker_symptom.html" class="arrow left">&larr;</a>
-    <a href="../html/checker_solution.html" class="arrow right">&rarr;</a>
-  </div>
+  <footer class="navbar">
+    <ul>
+        <li>
+            <a href="../html/main-board.html">
+                <img src="../data/img/icons/compass-solid.svg"/>
+            </a>
+        </li>                
+        <li> <a href="../html/main-todo.html"><img src="../data/img/icons/list-check-solid.svg"/></a></li>
+        <li> <a href="../html/main.html"><img src="../data/img/icons/pen-nib-solid.svg"/></a>
+        </li>
+        <li> <a href="../html/checker_info.html"><img src="../data/img/icons/stethoscope-solid.svg"/></a></li>
+        <li> <a href="../html/login.html"><img src="../data/img/icons/circle-user-solid.svg"/></a></li>
+    </ul>
+</footer>
 
   <script src="../js/checker_diagnosis.js"></script>
+
 </body>
 </html>

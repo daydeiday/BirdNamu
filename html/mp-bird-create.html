@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지: 반려조 등록</title>
+    <link rel="stylesheet" href="../data/style/mp-bird-create.css" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<header>
+    <button onclick="history.back()">뒤로가기</button>
+    <h1>반려조 등록</h1>
+</header>
+
+<main>
+  <section class="title">
+    <div>반려조 정보를 입력해주세요.</div>
+  </section>
+  
+  <section class="form">
+    <form id="birdForm">
+      <article>
+        <label for="birdImage">이미지 업로드:</label>
+        <input type="file" id="birdImage" name="birdImage" accept="image/*">
+      </article>
+      <article>
+        <label for="username">이름:</label>
+        <input type="text" id="username" name="username">
+      </article>
+      <article>
+        <label for="species">종:</label>
+        <select id="species" name="species"></select>
+      </article>
+      <article>
+        <label for="birthdate">생년월일:</label>
+        <input type="date" id="birthdate" name="birthdate">
+        <span id="ageInMonths"></span>
+      </article>
+      <article>
+        <label for="gender">성별:</label>
+        <select name="gender" id="gender">
+          <option value="female">수컷</option>
+          <option value="male">암컷</option>
+          <option value="other">모름</option>
+        </select>
+      </article>
+      <article>
+        <label for="traits">성격:</label>
+        <div id="selected-traits"></div>
+        <select id="traits" name="traits" multiple></select>
+      </article>
+    </form>
+  </section>
+
+  <section class="submit">
+    <article>
+      <input type="button" id="submit" value="등록 완료" onclick="handleSubmit()">
+    </article>
+  </section>
+</main>
+
+<footer class="navbar">
+  <ul>
+      <li>
+          <a href="../html/main-board.html">
+              <img src="../data/img/icons/compass-solid-color.svg"/>
+          </a>
+      </li>                
+      <li> <a href="../html/main-todo.html"><img src="../data/img/icons/list-check-solid.svg"/></a></li>
+      <li> <a href="../html/main.html"><img src="../data/img/icons/pen-nib-solid.svg"/></a>
+      </li>
+      <li> <a href="../html/checker_info.html"><img src="../data/img/icons/stethoscope-solid.svg"/></a></li>
+      <li> <a href="../html/login.html"><img src="../data/img/icons/circle-user-solid.svg"/></a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
