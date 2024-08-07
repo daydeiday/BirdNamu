@@ -13,37 +13,65 @@
   <header>
     <h1>건강 자문 AI</h1>
   </header>
-  <div class="option-bar">
-    <a href="../html/checker_info.html" class="option">기본 정보</a>
-    <span class="arrow">▶</span>
-    <a href="../html/checker_symptom.html" class="option active">증상 기록</a>
-    <span class="arrow">▶</span>
-    <a href="../html/checker_diagnosis.html" class="option">가능 질환</a>
-    <span class="arrow">▶</span>
-    <a href="../html/checker_solution.html" class="option">대처법</a>
-  </div>
 
-
-  <div class="container">
-    <div class="image-container">
-      <img src="../data/img/icons/bird_anatomy.jpg" alt="Bird" id="bird-image">
-      <div class="hover-area" id="head" onclick="showAilments('head')"
-        style="top: 50px; left: 50px; width: 100px; height: 100px;"></div>
-      <div class="hover-area" id="body" onclick="showAilments('body')"
-        style="top: 150px; left: 50px; width: 200px; height: 200px;"></div>
-      <div class="hover-area" id="wing" onclick="showAilments('wing')"
-        style="top: 150px; left: 250px; width: 150px; height: 150px;"></div>
-      <div class="hover-area" id="leg" onclick="showAilments('leg')"
-        style="top: 350px; left: 150px; width: 150px; height: 100px;"></div>
+  <main>
+    <div class="option-bar">
+      <a href="../html/checker_info.html" class="option">기본 정보</a>
+      <span class="arrow">▶</span>
+      <a href="../html/checker_symptom.html" class="option active">증상 기록</a>
+      <span class="arrow">▶</span>
+      <a href="../html/checker_diagnosis.html" class="option">가능 질환</a>
+      <span class="arrow">▶</span>
+      <a href="../html/checker_solution.html" class="option">대처법</a>
     </div>
-    <div id="ailments">
-      <!-- 가능 질환들 나오는 부분-->
-    </div>
-    <div class="navigation-arrows">
-      <a href="../html/checker_info.html" class="arrow left">&larr;</a>
-      <a href="../html/checker_solution.html" class="arrow right">&rarr;</a>
-    </div>
-  </div>
+  
+    <div class="content">
+      <div class="fixed-container">
+        <h2 class="title">증상 선택</h2>
+        <div class="grid-container">
+          <button class="grid-item" data-part="head">머리</button>
+          <button class="grid-item" data-part="eyes">눈</button>
+          <button class="grid-item" data-part="beak">부리</button>
+          <button class="grid-item" data-part="chest">가슴</button>
+          <button class="grid-item" data-part="wings">날개</button>
+          <button class="grid-item" data-part="abdomen">배</button>
+          <button class="grid-item" data-part="legs">다리</button>
+          <button class="grid-item" data-part="feet">발</button>
+          <button class="grid-item" data-part="skin">피부</button>
+        </div>
+      </div>
+  
+      <div id="symptoms-container" class="symptoms-container">
+        <div id="symptoms-list"></div>
+      </div>
+  
+      <div id="selected-data" class="selected-data">
+        <h2>선택된 신체 부위 및 증상</h2>
+        <div id="selected-parts"></div>
+        <button id="reset-button">Reset</button>
+      </div>
+  
+      <div class="navigation-arrows">
+        <a href="../html/checker_info.html" class="arrow left">&larr;</a>
+        <a href="../html/checker_solution.html" class="arrow right">&rarr;</a>
+      </div>
+    </div>  
+  </main>
+  <footer class="navbar">
+    <ul>
+        <li>
+            <a href="../html/main-board.html">
+                <img src="../data/img/icons/compass-solid.svg"/>
+            </a>
+        </li>                
+        <li> <a href="../html/main-todo.html"><img src="../data/img/icons/list-check-solid.svg"/></a></li>
+        <li> <a href="../html/main.html"><img src="../data/img/icons/pen-nib-solid.svg"/></a>
+        </li>
+        <li> <a href="../html/checker_info.html"><img src="../data/img/icons/stethoscope-solid.svg"/></a></li>
+        <li> <a href="../html/login.html"><img src="../data/img/icons/circle-user-solid.svg"/></a></li>
+    </ul>
+</footer>
+  <script src="../js/symptoms_data.js"></script>
   <script src="../js/checker_symptom.js"></script>
 </body>
 </html>

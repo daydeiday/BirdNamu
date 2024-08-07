@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  background-color: #4BB9B2;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header button {
+  background-color: #ffffff;
+  color: #4BB9B2;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #4BB9B2;
+  color: white;
+}
+
+header ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: white;
+  color: #4BB9B2;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+section.title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section.form article {
+  margin-bottom: 15px;
+}
+
+section.form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+section.form input[type="text"],
+section.form input[type="date"],
+section.form input[type="file"],
+section.form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+section.form select[multiple] {
+  height: auto;
+}
+
+section.submit {
+  text-align: center;
+}
+
+section.submit input[type="button"] {
+  padding: 10px 20px;
+  background-color: #4BB9B2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+section.submit input[type="button"]:hover {
+  background-color: #3a9792;
+}
+
+main.submitted {
+  text-align: center;
+  padding: 20px;
+}
+
+main.submitted h1 {
+  margin: 0;
+  color: #4BB9B2;
+}
+
+main.submitted h2 {
+  margin: 20px 0;
+  color: #333;
+}
+
+main.submitted a {
+  color: #4BB9B2;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #4BB9B2;
+  border-radius: 5px;
+}
+
+main.submitted a:hover {
+  background-color: #4BB9B2;
+  color: white;
+}
+
+footer.navbar {
+  background-color: #4BB9B2;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+footer.navbar>ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}

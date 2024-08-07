@@ -11,36 +11,54 @@
   <header>
     <h1>건강 자문 AI</h1>
   </header>
-  <div class="option-bar">
-    <a href="../html/checker_info.html" class="option active">기본 정보</a>
-    <span class="arrow">▶</span>
-    <a href="../html/checker_symptom.html" class="option">증상 기록</a>
-    <span class="arrow">▶</span>
-    <a href="../html/checker_diagnosis.html" class="option">가능 질환</a>
-    <span class="arrow">▶</span>
-    <a href="../html/checker_solution.html" class="option">대처법</a>
-  </div>
-
-  <div class="form-container">
-    <div id="exp">보다 정확한 진단을 위해서 반려조의 기본 정보를 알려주세요!</div>
-    <form>
-      <label for="age">나이(개월수):</label>
-      <input type="text" id="age" name="age">
-      <label for="species">종:</label>
-      <select id="species" name="species">
-        <!-- 종 scroll-down option 표시 부분 (이거 json 파일 연결해야됨...) -->
-      </select>
-      
-      <label for="gender">성별:</label>
-      <select id="gender" name="gender">
-        <option value="male">수컷</option>
-        <option value="female">암컷</option>
-        <option value="unknown">모름</option>
-      </select>
-    </form>
-  </div>
-  <a href="../html/checker_symptom.html" id="next-button">&rarr;</a>
-
+  <main>
+    <div class="option-bar">
+      <a href="../html/checker_info.html" class="option active">기본 정보</a>
+      <span class="arrow">▶</span>
+      <a href="../html/checker_symptom.html" class="option">증상 기록</a>
+      <span class="arrow">▶</span>
+      <a href="../html/checker_diagnosis.html" class="option">가능 질환</a>
+      <span class="arrow">▶</span>
+      <a href="../html/checker_solution.html" class="option">대처법</a>
+    </div>
+  
+    <div class="form-container">
+      <div id="exp">보다 정확한 진단을 위해서 반려조의 기본 정보를 알려주세요!</div>
+      <form>
+        <label for="age">나이(개월수):</label>
+        <input type="text" id="age" name="age">
+        <label for="species">종:</label>
+        <select id="species" name="species">
+          <!-- 종 scroll-down option 표시 부분 (이거 json 파일 연결해야됨...) -->
+        </select>
+        
+        <label for="gender">성별:</label>
+        <select id="gender" name="gender">
+          <option value="male">수컷</option>
+          <option value="female">암컷</option>
+          <option value="unknown">모름</option>
+        </select>
+      </form>
+    </div>
+    <div class="navigation-arrows">
+      <a href="#" class="return"></a>
+      <a href="../html/checker_symptom.html" class="arrow right">&rarr;</a>
+    </div>
+  </main>
+  <footer class="navbar">
+    <ul>
+        <li>
+            <a href="../html/main-board.html">
+                <img src="../data/img/icons/compass-solid.svg"/>
+            </a>
+        </li>                
+        <li> <a href="../html/main-todo.html"><img src="../data/img/icons/list-check-solid.svg"/></a></li>
+        <li> <a href="../html/main.html"><img src="../data/img/icons/pen-nib-solid.svg"/></a>
+        </li>
+        <li> <a href="../html/checker_info.html"><img src="../data/img/icons/stethoscope-solid.svg"/></a></li>
+        <li> <a href="../html/login.html"><img src="../data/img/icons/circle-user-solid.svg"/></a></li>
+    </ul>
+</footer>
   <script src="../js/checker_info.js"></script>
 </body>
 </html>
