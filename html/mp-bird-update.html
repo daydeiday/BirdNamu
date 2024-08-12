@@ -32,10 +32,13 @@
             <section class="title">
                 <div>반려조 정보를 수정해주세요.</div>
             </section>
+            <article>
+                <input type="button" id="delete" value="반려조 삭제하기" onclick="handleDelete()">
+            </article>
             <section class="form">
                 <form id="birdForm">
                     <article>
-                        <label for="birdImage">이미지 재업로드:</label>
+                        <label for="birdImage">사진 업로드:</label>
                         <input type="file" id="birdImage" name="birdImage" accept="image/*">
                     </article>
                     <article>
@@ -70,9 +73,6 @@
                 <article>
                     <input type="button" id="submit" value="수정 완료" onclick="handleSubmit()">
                 </article>
-                <article>
-                    <input type="button" id="delete" value="반려조 삭제하기" onclick="handleDelete()">
-                </article>
             </section>
         </div>
     </section>
@@ -80,100 +80,13 @@
 
 <footer class="navbar">
     <ul>
-        <li><a href="../html/main-board.html"><img src="../data/img/icons/compass-solid-color.svg"/></a></li>                
-        <li><a href="../html/main-todo.html"><img src="../data/img/icons/list-check-solid.svg"/></a></li>
-        <li><a href="../html/main.html"><img src="../data/img/icons/pen-nib-solid.svg"/></a></li>
-        <li><a href="../html/checker_info.html"><img src="../data/img/icons/stethoscope-solid.svg"/></a></li>
-        <li><a href="../html/login.html"><img src="../data/img/icons/circle-user-solid.svg"/></a></li>
+        <li><a href="../html/main-board.html"><img src="../data/img/icons/compass-solid.svg" alt="Home"/></a></li>
+        <li><a href="../html/main-todo.html"><img src="../data/img/icons/list-check-solid-color.svg" alt="To-Do"/></a></li>
+        <li><a href="../html/main.html"><img src="../data/img/icons/pen-nib-solid.svg" alt="Notes"/></a></li>
+        <li><a href="../html/checker_info.html"><img src="../data/img/icons/stethoscope-solid.svg" alt="Health"/></a></li>
+        <li><a href="../html/login.html"><img src="../data/img/icons/circle-user-solid.svg" alt="Profile"/></a></li>
     </ul>
 </footer>
 
-<script>
-    $(document).ready(function() {
-        // 종 정보 로드
-        $.getJSON('../data/species.json', function(data) {
-            let speciesOptions = '';
-            data.forEach(function(species) {
-                speciesOptions += `<option value="${species.value}">${species.text}</option>`;
-            });
-            $('#species').html(speciesOptions);
-        });
-
-        // 성격 정보 로드
-        $.getJSON('../data/traits.json', function(data) {
-            let traitsOptions = '';
-            data.forEach(function(trait) {
-                traitsOptions += `<option value="${trait.value}">${trait.text}</option>`;
-            });
-            $('#traits').html(traitsOptions);
-        });
-
-        // 생년월일 선택 시 개월 수 계산
-        $('#birthdate').on('change', function() {
-            const birthDate = new Date(this.value);
-            const today = new Date();
-            const ageInMonths = (today.getFullYear() - birthDate.getFullYear()) * 12 + (today.getMonth() - birthDate.getMonth());
-            $('#ageInMonths').text(`(${ageInMonths}개월)`);
-        });
-
-        // 성격 선택 처리
-        $('#traits').on('change', function() {
-            const selectedOptions = Array.from(this.selectedOptions).map(option => option.text);
-            const selectedTraitsHtml = selectedOptions.map(trait => `<span class="selected-trait">${trait}</span>`).join('');
-            $('#selected-traits').html(selectedTraitsHtml);
-        });
-
-        // 반려조 선택 시 정보 표시
-        $('#selectBird').on('change', function() {
-            const selectedBird = this.value;
-            $('#birdInfo').show();
-            // 여기에서 선택한 반려조의 정보를 로드해서 표시하는 로직 추가
-            // 예시로 송송이의 정보를 채워서 표시합니다.
-            if (selectedBird === '송송이') {
-                $('#username').val('송송이');
-                $('#birthdate').val('2020-01-01');
-                $('#gender').val('female');
-                $('#species').val('budgerigar');
-                $('#traits').val(['curious', 'active']);
-                $('#selected-traits').html('<span class="selected-trait">호기심많은</span><span class="selected-trait">활발한</span>');
-            }
-            // 다른 반려조의 정보도 비슷하게 처리합니다.
-        });
-    });
-
-    function handleSubmit() {
-        const form = document.getElementById('birdForm');
-        const formData = new FormData(form);
-
-        const name = formData.get('username');
-        const birthdate = formData.get('birthdate');
-        const gender = formData.get('gender');
-        const species = formData.get('species');
-        const traits = formData.getAll('traits');
-
-        // 생년월일로부터 개월 수 계산
-        const birthDateObj = new Date(birthdate);
-        const today = new Date();
-        const ageInMonths = (today.getFullYear() - birthDateObj.getFullYear()) * 12 + (today.getMonth() - birthDateObj.getMonth());
-
-        // 성격 선택 제한 확인
-        if (traits.length < 1 || traits.length > 3) {
-            alert('성격은 1개 이상 3개 이하로 선택해주세요.');
-            return;
-        }
-
-        const body = document.querySelector('body');
-        body.innerHTML =
-            '<main class="submitted"><section><div id="logo">새와나(id="logo")</div><div id="submitted"><h1>반갑습니다 :D</h1><h2>정보 수정이 완료되었습니다.</h2><div><a href="./login.html">로그인하러 가기</a></div></div></section></main>';
-    }
-
-    function handleDelete() {
-        if (confirm('반려조를 정말 삭제하겠습니까?')) {
-            // 삭제 처리 로직 추가
-            alert('반려조가 삭제되었습니다.');
-            // 삭제 후 페이지를 새로 고침하거나 다른 처리를 할 수 있습니다.
-        }
-    }
-</script>
 </body>
 </html>

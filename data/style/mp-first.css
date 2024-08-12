@@ -136,3 +136,40 @@ header {
   padding-top: 5px;
   padding-bottom: 10px;
 }
+
+#user-update button, #add-bird button, #update-bird button{
+  background-color: #4BB9B2;
+  color: white;
+  margin-top:1px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  width: 9%; 
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+#user-update button:hover {
+  background-color: #3a9792;
+  text-decoration: none; /* 밑줄 제거 */
+
+}
+
+#user-update button a,
+#add-bird button a,
+#update-bird button a {
+  color: white; 
+  text-decoration: none;
+  display: block; 
+  width: 100%; 
+  height: 100%; 
+}
+
+#user-update button a:hover,
+#add-bird button a:hover,
+#update-bird button a:hover {
+  color: white; 
+  text-decoration: none; 
+}

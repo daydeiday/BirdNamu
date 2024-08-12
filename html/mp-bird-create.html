@@ -6,8 +6,8 @@
     <title>마이페이지: 반려조 등록</title>
     <link rel="stylesheet" href="../data/style/mp-bird-create.css" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/mp-bird-create.js"></script>
 </head>
-
 <body>
 <header>
     <button onclick="history.back()">뒤로가기</button>
@@ -22,7 +22,7 @@
   <section class="form">
     <form id="birdForm">
       <article>
-        <label for="birdImage">이미지 업로드:</label>
+        <label for="birdImage">사진 업로드:</label>
         <input type="file" id="birdImage" name="birdImage" accept="image/*">
       </article>
       <article>
@@ -36,7 +36,7 @@
       <article>
         <label for="birthdate">생년월일:</label>
         <input type="date" id="birthdate" name="birthdate">
-        <span id="ageInMonths"></span>
+        <span id="ageInMonths"></span> <!-- Age in months will display here -->
       </article>
       <article>
         <label for="gender">성별:</label>
@@ -48,8 +48,8 @@
       </article>
       <article>
         <label for="traits">성격:</label>
-        <div id="selected-traits"></div>
         <select id="traits" name="traits" multiple></select>
+        <div id="selected-traits"></div> <!-- Selected traits will display here -->
       </article>
     </form>
   </section>

@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  background-color: #ffffff; /* Set entire background to white */
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,14 +9,21 @@ body {
 }
 
 header {
-  width: 100%;
-  background-color: #4BB9B2;
-  color: white;
+  width: 100vw;
+  height: 50px;
+  border-bottom: solid #4BB9B2 1px;
+  border-radius: 0px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 15px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  justify-content: space-between;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 header h1 {
@@ -42,11 +49,12 @@ header button:hover {
 
 main {
   width: 100%;
-  max-width: 600px;
-  background-color: white;
+  max-width: 800px;
+  background-color: #ffffff;  
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  margin-top: 50px; 
+  margin-bottom: 70px; /*수정완료 버튼 아래 공간 제공 */
+  box-sizing: border-box;
 }
 
 section.title {
@@ -80,6 +88,7 @@ section.form select[multiple] {
 
 section.submit {
   text-align: center;
+  bottom:40
 }
 
 section.submit input[type="button"] {
@@ -145,7 +154,21 @@ footer.navbar>ul {
   height: 100%;
 }
 
-footer.navbar>ul>li>a>img {
-  width: 24px;
-  height: 24px;
+#delete {
+  padding: 10px 20px;
+  background-color: #FF4B4B; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 11px;
+  font-style: bold;
+} 
+
+#delete:hover {
+  background-color: #FF1A1A; 
+}
+
+#delete:focus {
+  outline: none; 
 }

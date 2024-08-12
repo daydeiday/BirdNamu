@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마이페이지: 내 정보 수정</title>
     <link rel="stylesheet" href="../data/style/mp-user-update.css" type="text/css" />
-    <script src="../js/mp-bird-update.js"></script>
 </head>
 
 <body>
@@ -22,7 +21,7 @@
   <section class="form">
     <form id="birdForm">
       <article>
-        <label for="birdImage">이미지 재업로드:</label>
+        <label for="birdImage">사진 업로드:</label>
         <input type="file" id="birdImage" name="birdImage" accept="image/*">
       </article>
       <article>
@@ -59,7 +58,7 @@
 
   <section class="submit">
     <article>
-      <input type="button" id="submit" value="수정 완료" onclick="handleSubmit()">
+      <a href="./mp-first.html"><input type="button" id="submit" value="수정 완료"></a>
     </article>
   </section>
 </main>

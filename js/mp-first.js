@@ -17,6 +17,7 @@ const birds = [
 ];
 
 // Function to render bird information
+
 function renderBirdInfo() {
   const birdList = document.getElementById('bird-list');
   birdList.innerHTML = '';
