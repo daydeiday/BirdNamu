@@ -10,7 +10,7 @@
   <div class="wrapper">
     <div id="logo"><img src="../data/img/icons/crow-solid.svg" alt="logo"></div>
     
-    <form action="#" method="post">
+    <form id="loginForm">
       <div class="input-group" id="username">
         <label for="id">아이디 입력:</label>
         <input type="text" id="id" name="id" placeholder="아이디를 입력하세요">
@@ -26,5 +26,12 @@
       </div>
     </form>
   </div>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();  
+      window.location.href = './mp-first.html'; 
+    });
+  </script>
 </body>
 </html>

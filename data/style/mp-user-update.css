@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  background-color: #ffffff; /* Set entire background to white */
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,14 +9,21 @@ body {
 }
 
 header {
-  width: 100%;
-  background-color: #4BB9B2;
-  color: white;
+  width: 100vw;
+  height: 50px;
+  border-bottom: solid #4BB9B2 1px;
+  border-radius: 0px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 15px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  justify-content: space-between;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 header h1 {
@@ -40,28 +47,13 @@ header button:hover {
   color: white;
 }
 
-header ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-header ul li {
-  margin-left: 10px;
-  padding: 5px 10px;
-  border-radius: 50%;
-  background-color: white;
-  color: #4BB9B2;
-  text-align: center;
-}
-
 main {
   width: 100%;
-  max-width: 600px;
-  background-color: white;
+  max-width: 800px;
+  background-color: #ffffff; 
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  margin-top: 50px;
+  box-sizing: border-box;
 }
 
 section.title {
@@ -74,19 +66,39 @@ section.form article {
 }
 
 section.form label {
-  display: block;
+  display: inline-block;
   margin-bottom: 5px;
+  width: 100px; /* Fixed width for labels */
+  vertical-align: top;
 }
 
 section.form input[type="text"],
 section.form input[type="date"],
 section.form input[type="file"],
 section.form select {
-  width: 100%;
+  width: calc(100% - 110px); /* Adjust width to fit labels and spans */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+section.form span {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+  font-weight: bold;
+  color: #4BB9B2;
+}
+
+section.form #selected-traits {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #4BB9B2;
+  vertical-align: middle;
 }
 
 section.form select[multiple] {
@@ -148,7 +160,7 @@ footer.navbar {
   box-sizing: border-box;
 }
 
-footer.navbar>ul {
+footer.navbar > ul {
   width: 100%;
   margin: 0;
   padding: 0;
