@@ -5,6 +5,11 @@ body {
   padding: 0;
 }
 
+header{
+  width: 100vw;
+  height: 120px;
+}
+
 header h1 {
   margin: 0;
   position: absolute;
@@ -41,11 +46,24 @@ header ul li {
   text-align: center;
 }
 
+/*
 main {
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
   margin-top: 70px;
+}
+*/
+
+
+main {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
+  margin-top: 120px;
+  /* header height */
+  margin-bottom: 50px;
+  /* footer height */
 }
 
 .second-header {
